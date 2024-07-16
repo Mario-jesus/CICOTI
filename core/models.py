@@ -61,6 +61,8 @@ class Footer(models.Model):
 
 class Home(models.Model):
 
+    hero_background = models.ImageField(upload_to="core", verbose_name="Fondo (Portada)")
+    hero_layer = models.CharField(max_length=20, default="#00000088", verbose_name="Color de capa del fondo (Hexadecimal)")
     hero_title = models.CharField(max_length=100, verbose_name="Título (portada)")
     hero_date = models.CharField(max_length=50, verbose_name="Fecha (portada)")
     hero_place = models.CharField(max_length=100, verbose_name="Lugar (portada)")

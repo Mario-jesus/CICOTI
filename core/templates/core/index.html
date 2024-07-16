@@ -1,7 +1,7 @@
 {% extends 'core/base.html' %}
 {% load static %}
 
-{% block heroAttributes %}class="hero hero--home" style="height: 100vh; background-image: url('{% static 'core/img/resources/slide1.jpg' %}'); background-color: #0a032a99;"{% endblock %}
+{% block heroAttributes %}class="hero hero--home" style="height: 100vh; background-image: url('{{home.hero_background.url}}'); background-color: {{home.hero_layer}};"{% endblock %}
 
 {% block hero %}
     <p class="hero__date">{{home.hero_date}}</p>
