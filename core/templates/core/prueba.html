@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prueba</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        .accordion {
+            width: 300px;
+            border: 1px solid #aaa;
+            border-radius: 4px;
+            overflow: hidden;
+        }
+
+        .accordion-header {
+            background-color: #f1f1f1;
+            color: #333;
+            cursor: pointer;
+            padding: 10px;
+            font-weight: bold;
+            -webkit-user-select: none;
+            user-select: none;
+            transition: background-color 100ms, color 100ms;
+            display: block;
+
+            &:active {
+                background-color: #d3d3d3;
+                color: #000;
+            }
+        }
+
+        .accordion-content {
+            max-height: 0;
+            overflow: auto;
+            transition: max-height linear 300ms;
+            background-color: #f9f9f9;
+            padding: 0 10px;
+        }
+
+        .accordion-content p {
+            margin: 10px 0;
+        }
+
+        input[type="checkbox"] {
+            display: none;
+        }
+
+        input[type="checkbox"]:checked ~ .accordion-content {
+            max-height: 100px; /* Ajusta este valor según el contenido */
+        }
+    </style>
+</head>
+<body>
+    <div class="accordion">
+        <input type="checkbox" id="accordion-toggle">
+        <label for="accordion-toggle" class="accordion-header">Más información</label>
+        <div class="accordion-content">
+            <p>Este es el contenido adicional que se muestra cuando se expande el elemento.</p>
+        </div>
+    </div>
+</body>
+</html>

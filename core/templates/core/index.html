@@ -1,0 +1,131 @@
+{% extends 'core/base.html' %}
+{% load static %}
+
+{% block heroAttributes %}class="hero hero--home" style="height: 100vh; background-image: url('{% static 'core/img/resources/slide1.jpg' %}'); background-color: #0a032a99;"{% endblock %}
+
+{% block hero %}
+    <p class="hero__date">{{home.hero_date}}</p>
+    <h1 class="hero__title text-hover-theme">{{home.hero_title}}</h1>
+    <p class="hero__place"><span>Lugar</span> TecNM campus de los Ríos, Escárcega, Calkiní</p>
+    <ul class="hero__time">
+        <li><span id="chronometerDays">00</span>d</li>
+        <li class="time-li__border"><span id="chronometerHours">00</span>h</li>
+        <li class="time-li__border"><span id="chronometerMinutes">00</span>m</li>
+        <li class="time-li__border"><span id="chronometerSeconds">00</span>s</li>
+    </ul>
+{% endblock %}
+
+{% block main %}
+    <section class="container section__sedes">
+        <div class="sedes__img">
+            <img src="{% static 'core/img/logotec.png' %}" alt="TecNM ITSR">
+            <img src="{% static 'core/img/ITSElogo.png' %}" alt="TecNM de Escárcega">
+            <img src="{% static 'core/img/logocalkini.png' %}" alt="TecNM Calkini">
+            <img src="{% static 'core/img/logotuxtla.png' %}" alt="TecNM Tuxtla">
+            <img src="{% static 'core/img/logo_dacyti.png' %}" alt="UJAT">
+        </div>
+        <div class="sedes__content">
+            <div class="sedes__figure"></div>
+            <p class="sedes__text">{{site_config.site_name}}</p>
+            <h3 class="sedes__title">SEDES DEL EVENTO</h3>
+        </div>
+        <div class="container__cards">
+            <div class="card">
+                <img class="card__img" src="{% static 'core/img/resources/rios.jpg' %}" alt="ITSR">
+                <div class="card__content">
+                    <p class="card__name">TecNM campus de los Ríos</p>
+                    <p class="card__text">Innovar la Tecnología para Superar los Retos</p>
+                </div>
+            </div>
+            <div class="card">
+                <img class="card__img" src="{% static 'core/img/resources/escarcega.jpg' %}" alt="ITSE">
+                <div class="card__content">
+                    <p class="card__name">TecNM campus Escárcega</p>
+                    <p class="card__text">Por la superación del Sur y la grandeza de Campeche</p>
+                </div>
+            </div>
+            <div class="card">
+                <img class="card__img" src="{% static 'core/img/resources/calkini.jpg' %}" alt="ITESCAM">
+                <div class="card__content">
+                    <p class="card__name">TecNM campus Calkiní</p>
+                    <p class="card__text">Sabiduria, fortaleza de nuestra cultura</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="container section__main">
+        <div class="main__content">
+            <div class="home__modality">
+                <img class="main__logo" src="{{site_config.site_logo.url}}" alt="CICOTI2024">
+                <h2>{{home.body_date}}</h2>
+                <h5>Modalidad: {{home.body_modality}}</h5>
+            </div>
+            <hr>
+            {{home.body_content|safe}}
+        </div>
+        <div class="main__aside">
+            <a href="{{home.cta}}" class="modal__cta aside__cta">DESCARGAR PROGRAMA</a>
+            <aside>
+                <div class="aside__date">
+                    <h3>{{home.aside_title}}</h3>
+                    <div>
+                        {{home.aside_content|safe}}
+                    </div>
+                </div>
+                <div class="aside__endorce">
+                    <h3>Avalado por:</h3>
+                    <div><img src="{% static 'core/img/smia.png' %}" alt="smia"></div>
+                </div>
+            </aside>
+        </div>
+    </section>
+{% endblock %}
+
+{% block script %}
+    let chronometerDays = document.getElementById("chronometerDays");
+    let chronometerHours = document.getElementById("chronometerHours");
+    let chronometerMinutes = document.getElementById("chronometerMinutes");
+    let chronometerSeconds = document.getElementById("chronometerSeconds");
+
+    function countdownTimer(endDate) {
+        let timer, days, hours, minutes, seconds;
+
+        endDate = new Date(endDate).getTime();
+
+        if (isNaN(endDate)) {
+            return;
+        }
+
+        timer = setInterval(function() {
+            let now = new Date().getTime();
+            let timeRemaining = parseInt((endDate - now) / 1000);
+
+            if (timeRemaining >= 0) {
+                days = parseInt(timeRemaining / 86400);
+                timeRemaining = (timeRemaining % 86400);
+
+                hours = parseInt(timeRemaining / 3600);
+                timeRemaining = (timeRemaining % 3600);
+
+                minutes = parseInt(timeRemaining / 60);
+                timeRemaining = (timeRemaining % 60);
+
+                seconds = parseInt(timeRemaining);
+
+                let lengthDays = days.toString().length;
+                let sliceDays = lengthDays > 2 ? lengthDays * -1 : -2;
+
+                chronometerDays.innerText = ("0" + days).slice(sliceDays);
+                chronometerHours.innerText = ("0" + hours).slice(-2);
+                chronometerMinutes.innerText = ("0" + minutes).slice(-2);
+                chronometerSeconds.innerText = ("0" + seconds).slice(-2);
+            } else {
+                return;
+            }
+        }, 1000);
+    }
+
+    let endDate = "{{home.start_date|date:"Y-m-d H:i:s"}}";
+
+    countdownTimer(endDate);
+{% endblock %}

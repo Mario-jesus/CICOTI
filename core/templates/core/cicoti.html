@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CICOTI 2024</title>
+    <link rel="stylesheet" href="/css/normalize.css">
+    <link rel="stylesheet" href="/css/main.css">
+    <!-- <link rel="stylesheet" href="/css/movil.css"> -->
+    <!-- <link rel="stylesheet" href="/css/style.css"> -->
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <input type="checkbox" id="nav-check">
+            <label for="nav-check" class="menu__label">
+                <img src="/img/close.svg" alt="close" class="menu__hamburguer menu__hamburguer--close">
+                <img src="/img/menu.svg" alt="menu" class="menu__hamburguer menu__hamburguer--show">
+            </label>
+            <div class="container">
+                <a href="#" class="nav__logo"><img src="/img/logocicoti.png" alt="logocicoti"></a>
+                <div class="nav__content">
+                    <div class="nav__links">
+                        <a href="#">Inicio</a>
+                        <a href="#" class="text-twinkle text-hover-theme">Llamado para autores</a>
+                        <a href="#">Estudiantes/Workshop</a>
+                        <a href="#">Conferencias</a>
+                        <a href="#">Talleres</a>
+                        <div class="nav__dropdown">
+                            <input type="checkbox" id="navAboutCongress" class="dropdown__checkbox">
+                            <label for="navAboutCongress"><a class="dropdown__link">Sobre el congreso</a></label>
+                            <div class="dropdown__content dropdown__content--main">
+                                <div class="dropdown__nested">
+                                    <input type="checkbox" id="navAnnouncement" class="dropdown__checkbox">
+                                    <label for="navAnnouncement"><a class="dropdown__link">Convocatoria</a></label>
+                                    <div class="dropdown__content dropdown__content--nested">
+                                        <a href="#">Convocatoria</a>
+                                        <a href="#">Llamado para autores</a>
+                                    </div>
+                                </div>
+                                <div class="dropdown__nested">
+                                    <input type="checkbox" id="navAbout" class="dropdown__checkbox">
+                                    <label for="navAbout"><a class="dropdown__link">Acerca de</a></label>
+                                    <div class="dropdown__content dropdown__content--nested">
+                                        <a href="#">¿Que es CICOTI 2024?</a>
+                                        <a href="#">Autoridades</a>
+                                        <a href="#">Ediciones anteriores</a>
+                                    </div>
+                                </div>
+                                <div class="dropdown__nested">
+                                    <input type="checkbox" id="navHeadquarters" class="dropdown__checkbox">
+                                    <label for="navHeadquarters"><a class="dropdown__link">Sedes</a></label>
+                                    <div class="dropdown__content dropdown__content--nested">
+                                        <a href="#">TecNM campus de los Ríos</a>
+                                        <a href="#">TecNM campus de Escárcega</a>
+                                        <a href="#">TecNM campus de Calkini</a>
+                                    </div>
+                                </div>
+                                <a href="#">Comité organizador</a>
+                                <a href="#">Programa</a>
+                                <a href="#">Contactos</a>
+                            </div>
+                        </div>
+                        <a href="#">Costos</a>
+                    </div>
+                    <div class="btn__lenguage">
+                        <a>ES</a>
+                        <div class="dropdown__content">
+                            <a href="#">Inglés</a>
+                            <a href="#">Español</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+        <section class="hero" style="background-image: url('/img/resources/autores2.jpg');">
+            <div class="container">
+                <h2 class="hero__title">¿Qué es CICOTI 2022?</h2>
+                <div class="hero__return">
+                    <a href="" class="text-hover-theme">Inicio</a>
+                    <h5>CICOTI 2022</h5>
+                </div>
+            </div>
+            <figure class="hero__footer">
+                <div class="footer__content footer__content--movil"><svg viewBox="0 0 500 150" preserveAspectRatio="none" style="height: 100%; width: 100%;"><path d="M0.00,128.41 C149.99,150.00 397.29,159.20 502.69,95.84 L500.00,150.00 L0.00,150.00 Z" style="stroke: none; fill: #fff;"></path></svg></div>
+                <div class="footer__content footer__content--desktop"><svg viewBox="0 0 500 150" preserveAspectRatio="none" style="height: 100%; width: 100%;"><path d="M-1.69,80.25 C277.09,198.67 308.13,0.33 500.00,80.25 L500.56,150.31 L0.57,152.30 Z" style="stroke: none; fill: #fff;"></path></svg></div>
+            </figure>
+        </section>
+        <input type="checkbox" id="checkModal" style="display: none;" checked>
+        <section class="header__modal">
+            <div class="header__container">
+                <div class="modal__header">
+                    <img src="/img/header.png" alt="modal-header">
+                    <label for="checkModal" class="modal__close"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill: #F00; transform: scale(85%);"><path d="m16.192 6.344-4.243 4.242-4.242-4.242-1.414 1.414L10.535 12l-4.242 4.242 1.414 1.414 4.242-4.242 4.243 4.242 1.414-1.414L13.364 12l4.242-4.242z"></path></svg></label>
+                </div>
+                <div class="modal__body">
+                    <div class="body__content">
+                        <h3 class="modal__title">Revista Tecnología digital</h3>
+                        <p class="modal__text">Índice LatIndex: Folio 23658</p>
+                        <a href="#" class="modal__cta">Descargar</a>
+                    </div>
+                    <div class="body__content">
+                        <h3 class="modal__title">Revista Computación y Sistemas</h3>
+                        <p class="modal__text">Vol 27, No 2 (2023): 27(2) 2023</p>
+                        <a href="#" class="modal__cta">Descargar</a>
+                    </div>
+                </div>
+                <div class="modal__footer">
+                    <img src="/img/Pie.png" alt="modal-footer">
+                </div>
+            </div>
+        </section>
+    </header>
+    <main>
+        <section class="container section__cicoti">
+            <div class="cicoti__about">
+                <h4>CICOTI 2024</h4>
+                <p>CICOTI es un espacio abierto a la comunidad (docentes, investigadores, alumnos) a modo de favorecer la difusión de los temas y las relaciones entre los actores de las actividades de I+D+i en las Universidades. Es organizado por una Red de Universidades Nacionales con Carreras de Ingenería, Informática con el propósito de generar el intercambio de ideas entre investigadores en Ciencias de la Computación, de modo de fomentar la vinculación y potenciar el desarrollo coordinado de actividades de Investigación, Desarrollo e Innovación entre los mismos. El objetivo central es reunir líderes de proyectos, investigadores y becarios de I+D+i, de todas las universidades, de modo de discutir las líneas de investigación y los posibles mecanismos y temas/áreas específicas de cooperación.</p>
+            </div>
+            <div class="sedes__content">
+                <div class="sedes__figure"></div>
+                <p class="sedes__text">CICOTI 2024</p>
+                <h3 class="sedes__title">RESPALDADO POR LA SOCIEDAD</h3>
+            </div>
+            <img src="/img/smia.png" alt="smia">
+            <div class="cicoti__smia">
+                <h4><a href="https://smia.mx/" class="text-hover-theme">Sociedad Mexicana de Inteligencia Artificial</a></h4>
+                <p>La Sociedad Mexicana de Inteligencia Artificial es una sociedad científica cuya misión es promover el cultivo y la aplicación de la inteligencia artificial en la República Mexicana. Agrupa tanto a profesionales como a académicos del área, a quienes ofrece un marco organizacional y de gestión que les permite compartir y difundir sus proyectos de investigación, docencia, vinculación o difusión de la disciplina. Agrupa también, a través de sus a estudiantes de nivel licenciatura o posgrado cuyos intereses los orienten a cultivar alguna de las áreas de la inteligencia artificial.</p>
+            </div>
+        </section>
+    </main>
+    <footer class="last-footer">
+        <div class="container">
+            <div class="last-footer__content">
+                <img src="/img/retina-logo.png" alt="logo">
+                <div>
+                    <p>Dirección:  Km. 3 carretera Balancán-Villahermosa, Balancán, Tabasco C.P. 86930</p>
+                    <p><a href="#">CICOTI 2024</a> - &copy; Copyright 2024</p>
+                    <p>Diseñado por: <a href="#">CA - Computo Distribuido</a></p>
+                    <p>Desarrollado por: <a>Mario Jesús Arias Hernández</a></p>
+                </div>
+            </div>
+            <div class="last-footer__contact">
+                <p>Teléfono: <strong>(934) - 115 - 1443</strong></p>
+                <div>
+                    <a class="contact__btn contact__btn--facebook" title="Facebook"></a>
+                    <a class="contact__btn contact__btn--mail" title="Mail"></a>
+                    <a class="contact__btn contact__btn--youtube" title="Youtube"></a>
+                </div>
+            </div>
+        </div>
+        <div class="last-footer__decoration">
+            <div style="background-color: #ff76d5;"></div>
+            <div style="background-color: #1ad688;"></div>
+            <div style="background-color: #ffc600;"></div>
+            <div style="background-color: #c40172;"></div>
+            <div style="background-color: #990fff;"></div>
+            <div style="background-color: #ff7500;"></div>
+        </div>
+    </footer>
+</body>
+</html>
