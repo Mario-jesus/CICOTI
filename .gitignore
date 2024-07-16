@@ -168,4 +168,4 @@ cython_debug/
 0*.py
 
 # Media files
-media/
+media
